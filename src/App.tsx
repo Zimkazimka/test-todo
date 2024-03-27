@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React, { useEffect } from 'react';
+import { Provider } from 'react-redux';
+import { fetchTodos } from './reducers/todos';
+import store from './store';
+import AddTodoForm from './components/AddTodoForm';
+import TodoList from './components/TodoList';
 
-function App() {
+const App: React.FC = () => {
+  useEffect(() => {
+    // @ts-ignore
+    store.dispatch(fetchTodos());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="container mx-auto px-4 mt-8">
+        <h1 className="text-3xl font-bold mb-4">Todo List</h1>
+        <AddTodoForm />
+        <TodoList />
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;

@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+## Примечание
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В данной для задания API редактирование айтемов не обновляет данные на сервере (это написано в самой документации), поэтому при новом запросе будут возвращаться изначальные данные. Однако все необходимые для задания запросы на удаление\изменение будут отсылаться верно.
 
-## Available Scripts
+## First of all install require dependencies
 
 In the project directory, you can run:
+
+### `npm i`
+
+Then you can run and build the project:
 
 ### `npm start`
 
@@ -38,9 +42,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
